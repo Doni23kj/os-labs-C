@@ -1,0 +1,12 @@
+[Unit]
+Description=Writes time to a file every 10 seconds
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/timestamp/timestamp.py /var/log/timestamp.log
+Restart=on-failure
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target

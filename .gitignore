@@ -1,0 +1,4 @@
+*.tmp
+*_tsan
+*.o
+.DS_Store
